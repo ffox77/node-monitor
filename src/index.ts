@@ -15,5 +15,5 @@ app.listen(port, () => {
 });
 
 // Poll every minute
-setInterval(pollBlockNumber, 120_000);
+setInterval(pollBlockNumber, parseInt(process.env.POLLING_INTERVAL || '120000'));
 pollBlockNumber();
